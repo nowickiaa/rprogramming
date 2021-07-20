@@ -1,4 +1,8 @@
-## This is the example code (part 1)
+## This is the example code where a vector is created 
+# set the value of the vector
+# get the value of the vector
+# set the mean and get the mean (part 1)
+
 makeVector <- function(x = numeric()) {
   m <- NULL
   set <- function(y) {
@@ -13,7 +17,8 @@ makeVector <- function(x = numeric()) {
        getmean = getmean)
 }
 
-## This is the example code (part 2)
+## This is the example code 
+# this calculates the mean of the vector (if it has not already been calculated) (part 2)
 cachemean <- function(x, ...) {
   m <- x$getmean()
   if(!is.null(m)) {
@@ -27,6 +32,7 @@ cachemean <- function(x, ...) {
 }
 
 ## Creating a special matrix object - which is empty
+# creates and sets the value of the matrix, then set/gets the inverse of the matrix
 makeCacheMatrix <- function(x = matrix()){
   c <- NULL
   set <- function(y) {
@@ -43,6 +49,7 @@ makeCacheMatrix <- function(x = matrix()){
 }
   
 ## CacheSolve computes the inverse of the special matrix object above
+# if the inverse has already been calculated, this is skipped
 cacheSolve <- function(x,...){
   c <- x$getinverse()
   if(!is.null(c)) {
